@@ -17,7 +17,7 @@
 mathjs = require("mathjs")
 
 module.exports = (robot) ->
-  robot.respond /(calc|calculate|calculator|convert|math|maths)( me)? (.*)/i, (msg) ->
+  robot.respond /(calc|calculate|calculator|convert|math|maths|berechne|rechne|mathe|mathematik)( me| mir| ihm| ihr)? (.*)/i, (msg) ->
     try
       result = mathjs.eval msg.match[3]
       msg.send "#{result}"
